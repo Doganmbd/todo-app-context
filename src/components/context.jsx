@@ -5,10 +5,11 @@ const AppContext = React.createContext();
 const AppProvider = ({ child }) => {
   const [hello, setHello] = useState("hello dünya");
 
-  return 
-  (<AppContext.Provider value={hello}>
+  return (
+  <AppContext.Provider value={{hello , setHello}}>
     {child}
-    </AppContext.Provider>);
+    </AppContext.Provider>
+    );
 };
 
 export const useGlobalContext = () => {
